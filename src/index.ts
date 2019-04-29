@@ -30,6 +30,8 @@ async function batchIterate<T extends Document>(
       await bb.map(arr, (item) => {
         return iterator(item);
       });
+
+      arr.length = 0;
     }
 
     if (doc === null) {
